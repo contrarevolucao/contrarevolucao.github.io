@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7SJPQH9Y9B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7SJPQH9Y9B');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Obras de análise revolucionária e ação contra-revolucionária">
+  <meta name="keywords" content="Plinio Corrêa de Olveira, TFP, IPCO, revolução, contra-revolução, 
+  contrarrevolução, comunismo, globalismo, catolicismo, cristianismo, católica, 
+  católico, Igreja, Papa, militante, mobile, documento, nova ordem mundial, 
+  maçonária, maçonismo, república universal, doutrina, catecismo">
+  <meta name="author" content="Jhonathan P. Banczek">
+  <link rel="stylesheet" href="phonon.min.css">
+  <title>Sobre - RCR</title>
+</head>
+
+<body>
+  
+  <nav id="topo" class="navbar navbar-light navbar-expand-lg">
+    <div class="navbar-left">
+      <a class="navbar-title" href="/">
+        <img class="d-inline-block" src="favicon-32x32.png" width="30" height="30" alt="">
+      </a>
+  
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">Principal</a>
+        </li>
+        <li class="nav-item">
+          <a href="sobre.html" class="nav-link">Sobre</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="bg-light font-courier mb-2">
+  <div class="container text-info p-4">
+    <h1 class="text-center">Sobre RCR</h1>
+    <p class="text-center">
+      <i>Criado por </i>
+      <a target="_blank" href="https://twitter.com/jhoonb">@jhoonb</a>
+    </p>
+    <p class="text-center"> App desenvolvido para facilitar o uso e a leitura dos documentos em mobile </p>
+    <p class="text-justify">
+      <strong>Contato:</strong> <a href="mailto:jhonathan@protonmail.com">jhonathan@protonmail.com</a>
+    </p>
+    <p>
+      <strong>Logo</strong>: Brasão Leão da TFP (Sociedade Brasileira de Defesa da Tradição, Família e Propriedade).
+      Licença de uso: CC BY-SA 4.0. (Autor: P.P.Pyres)
+      <img src="favicon-32x32.png" alt="" />
+    </p>
+    <p>
+      <strong>Fonte dos documentos:</strong> <br>
+    <p> O texto dos livros de Plinio Corrêa de Oliveira foram extraídos do site:</p>
+
+    <ul>
+      <p><a href="https://www.pliniocorreadeoliveira.info/">pliniocorreadeoliveira.info</a> </p>
+
+      <p><a href="https://ipco.org.br/">Instituto Plinio Corrêa de Oliveira</a> </p>
+    </ul>
+
+    <p> O Catecismo de Dom Geraldo de Proença Sigaud foi extraído do site:
+      <a href="https://alexandriacatolica.blogspot.com/">alexandriacatolica.blogspot.com</a> </p>
+    <p>Os documentos do Magistério da Igreja foram extraidos do site:
+      <a href="http://www.vatican.va/">vatican.va</a> </p>
+    <br>
+    </p>
+    <p class="text-center"> <a href="mailto:jhonathan@protonmail.com">Bugs, dúvidas ou sugestões entre em contato.</a></p>
+    <br>
+
+    <p class="text-center">
+      <strong> Ajude a manter o app no ar fazendo um donativo </strong>
+      <br>
+      <button id="bitcoin" type="button" class="btn btn-warning">Bitcoin</button> |
+      <button id="picpay" type="button" class="btn btn-success">PicPay</button> |
+      <button id="nubank" type="button" class="btn btn-primary">Nubank</button>
+    </p>
+
+    <div id="qrcode" class="mx-auto" style="width: 200px;"> </div>
+  </div>
+</div>
+
+<script>
+
+  let bitcoin_state = false;
+  let picpay_state = false;
+  let nubank_state = false;
+
+  let btnBitcoin = document.getElementById("bitcoin");
+  let btnPicpay = document.getElementById("picpay");
+  let btnNubank = document.getElementById("nubank");
+
+  let div_qrcode = document.getElementById("qrcode");
+
+  let bit = `<img src="bitcoin-wallet.jpg" width="200px" alt="">`;
+  let pic = `<a href="https://picpay.me/jhoonb"><img src="picpay.jpeg" width="200px" alt=""></a>`;
+  let nub = `<img src="nubank-qrcode.png" width="200px" alt="">`;
+
+
+  btnBitcoin.onclick = () => {
+    if (bitcoin_state === false) {
+      div_qrcode.innerHTML = bit;
+      bitcoin_state = true;
+      picpay_state = false;
+      nubank_state = false;
+    }
+    else {
+      bitcoin_state = false;
+      div_qrcode.innerHTML = "";
+    }
+  };
+
+  btnPicpay.onclick = () => {
+    if (picpay_state === false) {
+      picpay_state = true;
+      bitcoin_state = false;
+      nubank_state = false;
+      div_qrcode.innerHTML = pic;
+    } else {
+      picpay_state = false;
+      div_qrcode.innerHTML = "";
+    }
+  };
+
+  btnNubank.onclick = () => {
+    if (nubank_state === false) {
+      nubank_state = true;
+      bitcoin_state = false;
+      picpay_state = false;
+      div_qrcode.innerHTML = nub;
+    } else {
+      nubank_state = false;
+      div_qrcode.innerHTML = "";
+    }
+  };
+
+</script>
+
+
+<footer class="footer bg-light">
+  <div class="container">
+    <div class="row align-items-end">
+      <div class="col-sm-6">
+        <div class="d-flex align-items-end mb-3 mb-sm-0">
+          <img src="favicon-32x32.png" alt="">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-6">
+            <ul class="mb-0">
+              <li><a class="text-danger" href="/">Principal</a></li>
+              <li><a class="text-danger" href="sobre.html">Sobre</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h6 class="text-center">versão 0.1.5 </h6>
+  </div>
+</footer>
+
+<script src="phonon.min.js"></script>
+</body>
+
+</html>
