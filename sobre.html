@@ -82,73 +82,10 @@
     </p>
     <p class="text-center"> <a href="mailto:jhonathan@protonmail.com">Bugs, dúvidas ou sugestões entre em contato.</a></p>
     <br>
-
-    <p class="text-center">
-      <strong> Ajude a manter o app no ar fazendo um donativo </strong>
-      <br>
-      <button id="bitcoin" type="button" class="btn btn-warning">Bitcoin</button> |
-      <button id="picpay" type="button" class="btn btn-success">PicPay</button> |
-      <button id="nubank" type="button" class="btn btn-primary">Nubank</button>
-    </p>
-
-    <div id="qrcode" class="mx-auto" style="width: 200px;"> </div>
   </div>
 </div>
 
 <script>
-
-  let bitcoin_state = false;
-  let picpay_state = false;
-  let nubank_state = false;
-
-  let btnBitcoin = document.getElementById("bitcoin");
-  let btnPicpay = document.getElementById("picpay");
-  let btnNubank = document.getElementById("nubank");
-
-  let div_qrcode = document.getElementById("qrcode");
-
-  let bit = `<img src="bitcoin-wallet.jpg" width="200px" alt="">`;
-  let pic = `<a href="https://picpay.me/jhoonb"><img src="picpay.jpeg" width="200px" alt=""></a>`;
-  let nub = `<img src="nubank-qrcode.png" width="200px" alt="">`;
-
-
-  btnBitcoin.onclick = () => {
-    if (bitcoin_state === false) {
-      div_qrcode.innerHTML = bit;
-      bitcoin_state = true;
-      picpay_state = false;
-      nubank_state = false;
-    }
-    else {
-      bitcoin_state = false;
-      div_qrcode.innerHTML = "";
-    }
-  };
-
-  btnPicpay.onclick = () => {
-    if (picpay_state === false) {
-      picpay_state = true;
-      bitcoin_state = false;
-      nubank_state = false;
-      div_qrcode.innerHTML = pic;
-    } else {
-      picpay_state = false;
-      div_qrcode.innerHTML = "";
-    }
-  };
-
-  btnNubank.onclick = () => {
-    if (nubank_state === false) {
-      nubank_state = true;
-      bitcoin_state = false;
-      picpay_state = false;
-      div_qrcode.innerHTML = nub;
-    } else {
-      nubank_state = false;
-      div_qrcode.innerHTML = "";
-    }
-  };
-
 </script>
 
 
